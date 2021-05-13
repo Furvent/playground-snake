@@ -1,7 +1,6 @@
-import Draw from './src/render/draw.mjs'
-import * as fig from './src/render/figure.mjs'
-import {config} from './src/snakev1/config.mjs'
-import Game from './src/snakev1/game.mjs'
+import Draw from './render/draw.mjs'
+import * as fig from './render/figure.mjs'
+import Game from './snakev1/game.mjs'
 
 document.onload = init();
 
