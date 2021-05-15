@@ -1,4 +1,13 @@
 {
+  "name": "playground-snake",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js"
+  },
+  "author": "Furvent",
+  "license": "ISC",
   "devDependencies": {
     "typescript": "^4.2.4"
   }
