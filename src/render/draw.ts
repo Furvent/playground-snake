@@ -1,4 +1,4 @@
-import { Point, Rect } from "./figure"
+import { Point, Rect } from "./figure.js"
 
 export default class Draw {
   ctx: CanvasRenderingContext2D
