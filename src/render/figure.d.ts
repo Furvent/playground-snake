@@ -1,13 +1,13 @@
 export type Rect = {
-  width: number
-  height: number
-}
+  width: number;
+  height: number;
+};
 
 export type Circle = {
-  radius: number
-}
+  radius: number;
+};
 
 export type Point = {
-  x: number
-  y: number
-}
+  x: number;
+  y: number;
+};
