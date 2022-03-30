@@ -8,6 +8,7 @@ export class Snake {
     this.length = length;
     this.positions = initPos;
     this.direction = Direction.RIGHT;
+    this.initDirectionInput();
   }
 
   move() {
@@ -29,9 +30,39 @@ export class Snake {
     }
   }
   moveWithVector(vector: Point) {
-    this.positions.forEach((pos) => {
-      pos.x += vector.x;
-      pos.y += vector.y;
+    let lastX = 0;
+    let lastY = 0;
+    this.positions.forEach((pos, index) => {
+      lastX = pos.x;
+      lastY = pos.y;
+      if (index === 0) {
+        pos.x += vector.x;
+        pos.y += vector.y;
+      } else {
+        pos.x = lastX;
+        pos.y = lastY;
+      }
+    });
+    console.log("After moveWithVector, snake positions: ", this.positions);
+  }
+
+  initDirectionInput() {
+    document.addEventListener("keyup", (event: KeyboardEvent) => {
+      console.log("touch pressed: ", event.key);
+      switch (event.key) {
+        case "ArrowUp":
+          this.direction = Direction.TOP;
+          break;
+        case "ArrowRight":
+          this.direction = Direction.RIGHT;
+          break;
+        case "ArrowDown":
+          this.direction = Direction.BOTTOM;
+          break;
+        case "ArrowLeft":
+          this.direction = Direction.LEFT;
+          break;
+      }
     });
   }
 }

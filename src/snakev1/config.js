@@ -10,9 +10,9 @@ export const config = {
   snake: {
     length: 3,
     initPos: [
-      { x: 0, y: 0 },
-      { x: 1, y: 0 },
       { x: 2, y: 0 },
+      { x: 1, y: 0 },
+      { x: 0, y: 0 },
     ],
   },
   cellWidth: 25,

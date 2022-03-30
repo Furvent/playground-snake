@@ -2,8 +2,10 @@ import Draw from "./render/draw.js";
 import Game from "./snakev1/game.js";
 
 console.log("MAIN")
-window.onload = () => {
-  init()
+document.onreadystatechange = function () {
+  if (document.readyState === 'complete') {
+    init();
+  }
 }
 
 function init() {
