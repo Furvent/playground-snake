@@ -8,6 +8,7 @@ export class Snake {
     this.length = length;
     this.positions = initPos;
     this.direction = Direction.RIGHT;
+    this.initDirectionInput();
   }
 
   move() {
@@ -32,6 +33,26 @@ export class Snake {
     this.positions.forEach((pos) => {
       pos.x += vector.x;
       pos.y += vector.y;
+    });
+  }
+
+  initDirectionInput() {
+    document.addEventListener("keyup", (event: KeyboardEvent) => {
+      console.log("touch pressed: ", event.key);
+      switch (event.key) {
+        case "ArrowUp":
+          this.direction = Direction.TOP;
+          break;
+        case "ArrowRight":
+          this.direction = Direction.RIGHT;
+          break;
+        case "ArrowDown":
+          this.direction = Direction.BOTTOM;
+          break;
+        case "ArrowLeft":
+          this.direction = Direction.LEFT;
+          break;
+      }
     });
   }
 }
